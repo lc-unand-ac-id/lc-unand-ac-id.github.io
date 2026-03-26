@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="SrTZawFSaLAONuV52vjH13dAEw3zOeO0J7W9G7wwpi8" />
+	<link rel="icon" href="https://lc.unand.ac.id/templates/ja_university_t3/favicon.ico" sizes="32x32" />
+    <title>Pusat Bahasa Universitas Andalas</title>
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Tahoma, Arial, sans-serif; background: #f5f5f5; color: #333; }
+    .header { background: #0066cc; padding: 15px 0; border-bottom: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .h-top { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+    .logo-box { display: flex; align-items: center; gap: 15px; }
+    .logo-box img { height: 60px; }
+    .logo-text h1 { font-size: 18px; font-weight: 600; color: #000; }
+    .logo-text p { font-size: 11px; color: #666; margin-top: 3px; }
+    .search-box { display: flex; gap: 8px; }
+    .search-box input { padding: 8px 12px; border: 1px solid #ddd; width: 200px; font-size: 12px; }
+    .search-box button { padding: 8px 15px; background: #0066cc; color: white; border: none; cursor: pointer; }
+    nav { background: #0066cc; }
+    nav ul { list-style: none; max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; }
+    nav li { position: relative; border-right: 1px solid #0052a3; }
+    nav a { display: block; padding: 12px 15px; color: white; text-decoration: none; font-size: 13px; }
+    nav a:hover { background: #0052a3; }
+    .submenu { display: none; position: absolute; top: 100%; left: 0; background: #0052a3; min-width: 180px; z-index: 100; }
+    .submenu li { border: none; }
+    .submenu a { padding: 10px 15px; }
+    li:hover > .submenu { display: block; }
+    .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; display: flex; gap: 20px; }
+    .main { flex: 1; }
+    .side { width: 280px; }
+    .widget { background: white; border: 1px solid #ddd; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .w-title { background: #0066cc; color: white; padding: 12px 15px; font-size: 13px; font-weight: 600; }
+    .w-content { padding: 15px; font-size: 12px; }
+    .w-content ul { list-style: none; }
+    .w-content a { color: #0066cc; text-decoration: none; }
+    .article { background: white; border: 2px solid #0066cc; padding: 20px; margin-bottom: 20px; }
+    .article h3 { color: #0066cc; font-size: 15px; margin-bottom: 10px; border-bottom: 2px solid #0066cc; padding-bottom: 10px; }
+    .article a { background: #0066cc; color: white; padding: 8px 15px; text-decoration: none; display: inline-block; margin-top: 10px; }
+    .slider { background: white; border: 1px solid #ddd; margin-bottom: 20px; }
+    .slider img { width: 100%; }
+    .slider-ctrl { text-align: center; padding: 10px; background: #f9f9f9; }
+    .slider-ctrl button { padding: 5px 10px; margin: 0 3px; background: #0066cc; color: white; border: none; cursor: pointer; }
+    .reg-box { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px; }
+    .reg-btn { background: white; border: 1px solid #ddd; display: block; }
+    .reg-btn img { width: 100%; }
+    .news { background: white; border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; }
+    .news h3 { background: #0066cc; color: white; padding: 12px; margin: -20px -20px 15px -20px; }
+    .news-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+    .news-item h4 a { color: #0066cc; font-size: 13px; }
+    .news-date { font-size: 11px; color: #999; }
+    .news-text { font-size: 12px; color: #555; }
+    .news-item img { float: left; margin-right: 12px; width: 80px; }
+    .gallery { background: white; border: 1px solid #ddd; padding: 20px; }
+    .gallery h3 { background: #0066cc; color: white; padding: 12px; margin: -20px -20px 15px -20px; }
+    .gal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .gal-grid img { width: 100%; }
+    footer { background: #333; color: white; padding: 40px 20px; margin-top: 40px; font-size: 12px; }
+    .f-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 20px; }
+    .f-col h4 { margin-bottom: 12px; border-bottom: 2px solid #0066cc; padding-bottom: 8px; }
+    .f-col a { color: #99ccff; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="h-top">
+            <div class="logo-box">
+                <img src="https://lc.unand.ac.id/images/cats1-removebg-preview.png" alt="Logo">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Cari...">
+                <button>Pencarian</button>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#">BERANDA</a></li>
+            <li><a href="#">Tentang Kami</a>
+                <ul class="submenu">
+                    <li><a href="#">Profil</a></li>
+                    <li><a href="#">Visi dan Misi</a></li>
+                    <li><a href="#">Struktur Organisasi</a></li>
+                    <li><a href="#">Staff Akademik</a></li>
+                    <li><a href="#">Fasilitas</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Pelatihan</a>
+                <ul class="submenu">
+                    <li><a href="#">Bahasa Indonesia</a></li>
+                    <li><a href="#">Bahasa Asing</a></li>
+                    <li><a href="#">TOEFL Preparation</a></li>
+                    <li><a href="#">IELTS Preparation</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tes</a>
+                <ul class="submenu">
+                    <li><a href="#">ITP TOEFL</a></li>
+                    <li><a href="#">TOEFL Prediction</a></li>
+                    <li><a href="#">IELTS</a></li>
+                    <li><a href="#">TOEIC</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Terjemahan</a></li>
+            <li><a href="#">BERITA</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="main">
+            <div class="slider">
+                <img src="https://lc.unand.ac.id/images/resized/images/sampledata/slideshow/Maba_2024_900_250.png" alt="Slider">
+                <div class="slider-ctrl">
+                    <button>« Previous</button> <button>PLAY</button> <button>STOP</button> <button>Next »</button>
+                </div>
+            </div>
+
+            <div class="reg-box">
+                <a href="http://simtb.lc.unand.ac.id/" class="reg-btn">
+                    <img src="https://lc.unand.ac.id/images/menu-pendaftaran/Pendaftaran_Tes.png" alt="Tes">
+                </a>
+                <a href="http://simpb.lc.unand.ac.id/" class="reg-btn">
+                    <img src="https://lc.unand.ac.id/images/menu-pendaftaran/Pendaftaran_Pelatihan.png" alt="Pelatihan">
+                </a>
+                <a href="http://sertifikat.lc.unand.ac.id/" class="reg-btn">
+                    <img src="https://lc.unand.ac.id/images/menu-pendaftaran/Pendaftaran_Terjemahan.png" alt="Terjemahan">
+                </a>
+                <a href="mailto:translation.uptpb.unand@gmail.com" class="reg-btn">
+                    <img src="https://lc.unand.ac.id/images/menu-pendaftaran/Pengecekan_Sertifikat.png" alt="Sertifikat">
+                </a>
+            </div>
+
+            <div class="news">
+                <h3>Berita dan Peristiwa</h3>
+                <div class="news-item">
+                    <h4><a href="#">Jadwal Tes TOEFL Prediction MABA 2025</a></h4>
+                    <div class="news-date">Selasa, 08 Juli 2025</div>
+                    <div class="news-text">Tes TOEFL akan diadakan dalam 8 Batch dengan 3 sesi ujian</div>
+                </div>
+                <div class="news-item">
+                    <h4><a href="#">Layanan GRATIS untuk Dosen</a></h4>
+                    <div class="news-date">Minggu, 07 April 2024</div>
+                    <div class="news-text">514 naskah artikel telah diterjemahkan dan di-proofred sejak tahun 2021</div>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <h3>Gallery</h3>
+                <div class="gal-grid">
+                    <a href="https://lc.unand.ac.id/images/ja-slider/Cek_1.jpg"><img src="https://lc.unand.ac.id/images/ja-slider/Cek_1.jpg" alt="1"></a>
+                    <a href="https://lc.unand.ac.id/images/ja-slider/PEL1.jpg"><img src="https://lc.unand.ac.id/images/ja-slider/PEL1.jpg" alt="2"></a>
+                    <a href="https://lc.unand.ac.id/images/ja-slider/Ter_2.jpg"><img src="https://lc.unand.ac.id/images/ja-slider/Ter_2.jpg" alt="3"></a>
+                    <a href="https://lc.unand.ac.id/images/ja-slider/Tes2.jpg"><img src="https://lc.unand.ac.id/images/ja-slider/Tes2.jpg" alt="4"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="side">
+            <div class="widget">
+                <div class="w-title">Menu</div>
+                <div class="w-content">
+                    <ul>
+                        <li><a href="#">BERANDA</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Pelatihan</a></li>
+                        <li><a href="#">Tes</a></li>
+                        <li><a href="#">Terjemahan</a></li>
+                        <li><a href="#">BERITA</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <h3>JADWAL TES TOEFL MABA 2025</h3>
+                <p>Tes TOEFL akan diadakan dalam 8 Batch</p>
+                <a href="#">Klik Disini</a>
+            </div>
+
+            <div class="widget">
+                <img src="https://lc.unand.ac.id/images/2320_ielts_25.png" alt="IELTS" style="width:100%;">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="f-container">
+            <div class="f-col">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#">BERANDA</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Program</h4>
+                <ul>
+                    <li><a href="#">Pelatihan</a></li>
+                    <li><a href="#">TOEFL</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Tes</h4>
+                <ul>
+                    <li><a href="#">ITP TOEFL</a></li>
+                    <li><a href="#">IELTS</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>Kerjasama</h4>
+                <ul>
+                    <li><a href="https://www.iief.or.id/">IIEF</a></li>
+                </ul>
+            </div>
+        </div>
+        <p style="text-align:center; padding-top:20px; border-top:1px solid #555; margin-top:20px;">Hak Cipta © 2026 Pusat Bahasa Universitas Andalas</p>
+    </footer>
+</body>
+</html>
